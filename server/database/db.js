@@ -16,8 +16,3 @@ const initializeDatabase = async () => {
 
 module.exports = {initializeDatabase}
 
-
-// , {
-//     useNewUrlParser : true,
-//     useUnifiedTopology : true
-// }
