@@ -36,4 +36,12 @@ app.get("/tasks/page", verifyJWT, getTasksByPage) // Fetch tasks by page
 // Statistic Api
 app.get("/dashboard/stats",verifyJWT, getStatistics) // Fetch statistics
 
+
+
+const PORT = process.env.PORT || 3000
+
+app.listen(PORT , () => {
+    console.log(`Server is running on PORT : ${PORT}`)
+})
+
 module.exports = {app}
