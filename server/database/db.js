@@ -5,10 +5,7 @@ const mongoUrl = process.env.MONGODBURI
 
 const initializeDatabase = async () => {
     try{
-        const connection = mongoose.connect(mongoUrl, {
-            useNewUrlParser : true,
-            useUnifiedTopology : true
-        })
+        const connection = mongoose.connect(mongoUrl)
         if(connection){
             console.log("Database connected successfully!")
         }
@@ -18,3 +15,9 @@ const initializeDatabase = async () => {
 }
 
 module.exports = {initializeDatabase}
+
+
+// , {
+//     useNewUrlParser : true,
+//     useUnifiedTopology : true
+// }
