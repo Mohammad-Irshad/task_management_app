@@ -4,7 +4,7 @@ import axios from 'axios'
 
 export const signUpUser = createAsyncThunk('user/signup', async (signUpData, {rejectWithValue}) => {
     try{
-        const response = await axios.post(`http://localhost:3000/auth/signup`, signUpData)
+        const response = await axios.post(`https://task-management-appserver.vercel.app/auth/signup`, signUpData)
         return response.data
     }catch(err){
         return rejectWithValue(err.response?.data || { message: "Something went wrong" })
@@ -13,7 +13,7 @@ export const signUpUser = createAsyncThunk('user/signup', async (signUpData, {re
 
 export const loginUser = createAsyncThunk('user/login', async (loginData, { rejectWithValue }) => {
     try{
-        const response = await axios.post(`http://localhost:3000/auth/login`, loginData)
+        const response = await axios.post(`https://task-management-appserver.vercel.app/auth/login`, loginData)
         return response.data
     }catch(err){
         return rejectWithValue(err.response?.data || { message: "Something went wrong" })

@@ -7,7 +7,7 @@ export const addTask = createAsyncThunk('task/addTask', async (taskData, {reject
         return rejectWithValue('No token found');
     }
     try{
-        const response = await axios.post(`http://localhost:3000/tasks`, taskData, {
+        const response = await axios.post(`https://task-management-appserver.vercel.app/tasks`, taskData, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -24,7 +24,7 @@ export const getAllTasks = createAsyncThunk('task/getAllTasks', async () => {
         return rejectWithValue('No token found');
     }
     try{
-        const response = await axios.get(`http://localhost:3000/tasks`, {
+        const response = await axios.get(`https://task-management-appserver.vercel.app/tasks`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -41,7 +41,7 @@ export const deleteTask = createAsyncThunk('task/deleteTask', async (taskId) => 
         return rejectWithValue('No token found');
     }
     try{
-        const response = await axios.delete(`http://localhost:3000/tasks/${taskId}`, {
+        const response = await axios.delete(`https://task-management-appserver.vercel.app/tasks/${taskId}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -58,7 +58,7 @@ export const editTask = createAsyncThunk('task/editTask', async ({taskId, update
         return rejectWithValue('No token found');
     }
     try{
-        const response = await axios.put(`http://localhost:3000/tasks/${taskId}`, updatedData, {
+        const response = await axios.put(`https://task-management-appserver.vercel.app/tasks/${taskId}`, updatedData, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }
@@ -77,7 +77,7 @@ export const getTasksByPage = createAsyncThunk('task/getTasksByPage', async ({pa
         return rejectWithValue('No token found');
     }
     try{
-        const response = await axios.get(`http://localhost:3000/tasks/page?page=${page}&limit=${limit}`, {
+        const response = await axios.get(`https://task-management-appserver.vercel.app/tasks/page?page=${page}&limit=${limit}`, {
             headers: {
                 'Authorization': `Bearer ${token}`
             }

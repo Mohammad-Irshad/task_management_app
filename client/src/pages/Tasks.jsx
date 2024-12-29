@@ -167,7 +167,7 @@ const Tasks = () => {
                     )
                     
                 }) : 
-                <p>Task list is empty</p>
+                null
                 }
             </div>
             

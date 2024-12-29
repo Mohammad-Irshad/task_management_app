@@ -24,7 +24,7 @@ const Dashboard = () => {
           return rejectWithValue('No token found');
       }
       try {
-        const response = await axios.get('http://localhost:3000/dashboard/stats', {
+        const response = await axios.get('https://task-management-appserver.vercel.app/dashboard/stats', {
           headers: {
               'Authorization': `Bearer ${token}`
           }
