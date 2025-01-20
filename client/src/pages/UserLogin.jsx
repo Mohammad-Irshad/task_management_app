@@ -4,8 +4,8 @@ import { loginUser } from '../app/features/userSlice'
 import { Link, useNavigate } from 'react-router-dom'
 
 const UserLogin = () => {
-    const [email, setEmail] = useState("")
-    const [password, setPassword] = useState("")
+    const [email, setEmail] = useState("guestuser@gmail.com")
+    const [password, setPassword] = useState("121001@Gu")
     const [errorMessage, setErrorMessage] = useState(null)
     
     const token = localStorage.getItem('accessToken')
