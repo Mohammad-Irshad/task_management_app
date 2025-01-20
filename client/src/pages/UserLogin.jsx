@@ -48,8 +48,8 @@ const UserLogin = () => {
                         {errorMessage && <p>{errorMessage}</p>}
                     </form>   
                     <br/>
-                    <Link to={'/signup'}>Don't have an account? Click here to singup.</Link> 
                     <p>Click Login! To Login as Guest User.</p>
+                    <Link to={'/signup'}>Don't have an account? Click here to singup.</Link> 
                 </div>
             </div>
         </div>
